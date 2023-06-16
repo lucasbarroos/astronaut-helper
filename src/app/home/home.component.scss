@@ -1,6 +1,8 @@
+@import "../../variables.scss";
+
 .home {
   min-height: 60vh;
-  background-color: #8257e5;
+  background-color: $purple;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -10,6 +12,6 @@
 
 .title {
   font-size: 62px;
-  color: white;
+  color: $white;
   margin: 0px;
 }
