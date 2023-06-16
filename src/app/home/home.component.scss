@@ -11,7 +11,11 @@
 }
 
 .title {
-  font-size: 62px;
+  font-size: 48px;
   color: $white;
   margin: 0px;
+  text-align: center;
+  @media (min-width: calc($tablet-max-size + 1px)) {
+    font-size: 64px;
+  }
 }
