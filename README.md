@@ -1,3 +1,3 @@
-# AstrounautHelper
+# AstronautHelper
 
-Simple project to help an astrounaut.
+Simple project to help an astronaut.
