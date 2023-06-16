@@ -10,6 +10,7 @@ import { AnimationComponent } from './home/components/animation/animation.compon
 import { ActionButtonComponent } from './home/components/action-button/action-button.component';
 import { AboutSectionComponent } from './home/components/about-section/about-section.component';
 import { LeadSectionComponent } from './home/components/lead-section/lead-section.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 export function playerFactory() {
   return player;
@@ -28,6 +29,7 @@ export function playerFactory() {
     BrowserModule,
     AppRoutingModule,
     LottieModule.forRoot({ player: playerFactory }),
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [
