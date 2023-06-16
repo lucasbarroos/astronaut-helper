@@ -17,11 +17,11 @@ $border-radius-laptop: 15px;
   background-color: $purple;
   padding: 20px 10px;
   border-bottom-left-radius: $border-radius-mobile;
-  border-bottom-left-radius: $border-radius-mobile;
+  border-bottom-right-radius: $border-radius-mobile;
   @media (min-width: calc($tablet-max-size + 1px)) {
     padding: 128px 60px;    
     border-bottom-left-radius: $border-radius-laptop;
-    border-bottom-left-radius: $border-radius-laptop;
+    border-bottom-right-radius: $border-radius-laptop;
   }
   transition: 2s;
 }
