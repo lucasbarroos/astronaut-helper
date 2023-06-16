@@ -1,13 +1,17 @@
 @import "../../variables.scss";
 
 .home {
-  min-height: 60vh;
   background-color: $purple;
   display: flex;
   flex-direction: column;
   gap: 20px;
   justify-content: center;
   align-items: center;
+  padding: 20px 10px;
+  @media (min-width: calc($tablet-max-size + 1px)) {
+    padding: 128px 60px;
+  }
+  transition: 2s;
 }
 
 .title {
