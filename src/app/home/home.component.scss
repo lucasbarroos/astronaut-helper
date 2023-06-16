@@ -15,6 +15,7 @@
   color: $white;
   margin: 0px;
   text-align: center;
+  text-shadow: 0px 0px 1px $gray;
   @media (min-width: calc($tablet-max-size + 1px)) {
     font-size: 64px;
   }
