@@ -9,6 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { AnimationComponent } from './home/components/animation/animation.component';
 import { ActionButtonComponent } from './home/components/action-button/action-button.component';
 import { AboutSectionComponent } from './home/components/about-section/about-section.component';
+import { LeadSectionComponent } from './home/components/lead-section/lead-section.component';
 
 export function playerFactory() {
   return player;
@@ -21,6 +22,7 @@ export function playerFactory() {
     AnimationComponent,
     ActionButtonComponent,
     AboutSectionComponent,
+    LeadSectionComponent,
   ],
   imports: [
     BrowserModule,
