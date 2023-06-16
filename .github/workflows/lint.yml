@@ -24,9 +24,6 @@ jobs:
 
       - name: Install Node.js dependencies
         run: npm install
-      
-      - name: Install Angular dependencies
-        run: npm install @angular/cli
 
       - name: Run Ng Lint
-        run: ng lint
+        run: npm run lint
