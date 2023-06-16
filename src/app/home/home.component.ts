@@ -10,4 +10,8 @@ export class HomeComponent {
   homepageActionButtonClicked() {
     alert('Homepage action button clicked!');
   }
+
+  handleSubmitClicked($event: any) {
+    console.log('HandleSubmitClicked', $event);
+  }
 }
