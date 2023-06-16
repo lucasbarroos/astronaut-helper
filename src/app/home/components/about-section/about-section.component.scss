@@ -1,8 +1,15 @@
+@import "../../../../variables.scss";
+
 .about-section {
     display: flex;
-    flex-direction: row;
+    flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
-    padding: 20px 40px;
-    min-height: 40vh;
+    text-align: center;
+    padding: 40px 60px;
+    gap: 10px;
+    @media (min-width: $tablet-max-size) {
+        padding: 40px 120px;
+        flex-direction: row;
+    }
 }

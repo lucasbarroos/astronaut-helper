@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AboutSectionComponent {
   animationStyles: Partial<CSSStyleDeclaration> = {
-    maxWidth: '20vw',
+    maxWidth: '300px',
     margin: '0 auto',
   };
 }
