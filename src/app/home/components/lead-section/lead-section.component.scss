@@ -1,17 +1,99 @@
 @import "../../../../variables.scss";
 
 .lead-section {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 60px;
+  gap: 10px;
+  background-color: $gray-light;
+  min-height: 20vh;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+  @media (min-width: calc($tablet-max-size + 1px)) {
+    padding: 128px 60px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+
+  @media (min-width: $tablet-max-size) {
+    padding: 40px 120px;
+  }
+
+  .title-container {
+    max-width: 650px;
+    text-align: center;
+  }
+
+  title {
+    font-size: $font-large;
+    color: $purple;
+  }
+
+  .lead-form {
+    background-color: $purple-light;
+    padding: 10px 12px;
+    margin-bottom: 100px;
+    border-radius: 7px;
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    padding: 40px 60px;
-    gap: 10px;
-    background-color: $gray-light;
-    min-height: 30vh; //TODO: remove it
+    width: 90%;
+    font-size: $font-medium;
+
     @media (min-width: $tablet-max-size) {
-        padding: 40px 120px;
-        flex-direction: row;
+      width: 30%;
+      padding: 20px 32px;
+      font-size: $font-large;
     }
+
+    input {
+      width: 90%;
+      border-radius: 5px;
+      border: none;
+      padding: 4px 12px;
+      font-size: $font-medium;
+      text-align: center;
+      @media (min-width: $tablet-max-size) {
+        font-size: $font-large;
+      }
+    }
+
+    label {
+      margin-bottom: 10px;
+      font-size: $font-medium;
+      @media (min-width: $tablet-max-size) {
+        font-size: $font-large;
+      }
+    }
+
+    small {
+      font-size: $font-small;
+      color: $red;
+
+      @media (min-width: $tablet-max-size) {
+        font-size: $font-medium;
+      }
+    }
+
+    button {
+      color: $black;
+      background-color: $white;
+      font-size: $font-medium;
+      box-shadow: 0px 0px $gray-light;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 15px;
+      font-weight: 700;
+      cursor: pointer;
+      @media (min-width: $tablet-max-size) {
+          font-size: $font-large;
+          padding: 14px 24px;
+          border-radius: 30px;
+          font-weight: 400;
+      }
+    }
+  }
 }
