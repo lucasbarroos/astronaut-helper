@@ -11,7 +11,7 @@ export class HomeComponent {
     el?.scrollIntoView({ behavior: 'smooth' });
   }
 
-  handleSubmitClicked($event: any) {
+  handleSubmitClicked($event: { name: string, email: string }) {
     console.log('HandleSubmitClicked', $event);
   }
 }
