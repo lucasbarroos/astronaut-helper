@@ -1,0 +1,17 @@
+@import "../../../../variables.scss";
+
+.lead-section {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px 60px;
+    gap: 10px;
+    background-color: $gray-light;
+    min-height: 30vh; //TODO: remove it
+    @media (min-width: $tablet-max-size) {
+        padding: 40px 120px;
+        flex-direction: row;
+    }
+}
