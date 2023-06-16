@@ -1,0 +1,21 @@
+<div class="lead-section">
+    <div class="title-container">
+        <h3>
+            Junte-se à nossa newsletter e faça parte da mudança! Receba atualizações, eventos e oportunidades de ajudar.
+            Seja um herói alimentando a esperança!
+        </h3>
+    </div>
+    <form class="lead-form" [formGroup]="formGroup" (ngSubmit)="handleSubmit()">
+        <label for="name">Name:</label>
+        <input type="text" formControlName="name" placeholder="Your Name" name="name" />
+        <small *ngIf="showErrors && !isValidField('name')">The field is required and needs more than 2 letters.</small>
+        <br>
+        <label for="email">Email:</label>
+        <input type="email" formControlName="email" placeholder="Your Email" name="email" />
+        <small *ngIf="showErrors && !isValidField('email')">The field is required, please, add a valid email.</small>
+        <br>
+        <button type="submit">
+            Submit
+        </button>
+    </form>
+</div>

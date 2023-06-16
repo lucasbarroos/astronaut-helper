@@ -6,8 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
-
   homepageActionButtonClicked() {
-    alert('Homepage action button clicked!');
+    const el = document.getElementById('leadSection');
+    el?.scrollIntoView({ behavior: 'smooth' });
+  }
+
+  handleSubmitClicked($event: { name: string, email: string }) {
+    console.log('HandleSubmitClicked', $event);
   }
 }
