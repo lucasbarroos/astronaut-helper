@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { AnimationOptions } from 'ngx-lottie';
 import { AnimationItem } from 'ngx-lottie/lib/symbols';
 
@@ -8,12 +8,25 @@ import { AnimationItem } from 'ngx-lottie/lib/symbols';
   styleUrls: ['./animation.component.scss']
 })
 export class AnimationComponent {
-    options: AnimationOptions = {
-      path: '/assets/animation.json',
-    };
+  @Input()
+  path: string = '/assets/animation.json';
 
-    animationCreated(animationItem: AnimationItem): void {
-      console.log(animationItem);
-    }
+  @Input()
+  styles: Partial<CSSStyleDeclaration> = {};
+
+  options: AnimationOptions = {};
+
+  constructor() {
+  }
+
+  ngOnInit() {
+    this.options = {
+      path: this.path,
+    };
+  }
+
+  animationCreated(animationItem: AnimationItem): void {
+    console.log(animationItem);
+  }
 
 }
