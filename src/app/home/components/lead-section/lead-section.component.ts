@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
@@ -6,10 +6,10 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   templateUrl: './lead-section.component.html',
   styleUrls: ['./lead-section.component.scss']
 })
-export class LeadSectionComponent implements OnInit {
+export class LeadSectionComponent {
 
   @Output()
-  onSubmit: EventEmitter<any> = new EventEmitter();
+  handleSubmitClicked: EventEmitter<{ name: string, email: string }> = new EventEmitter();
 
   requireFieldsValidors = [
     Validators.required,
@@ -23,13 +23,6 @@ export class LeadSectionComponent implements OnInit {
     email: new FormControl('', this.requireFieldsValidors),
   });
 
-  constructor() {
-
-  }
-
-  ngOnInit() {
-  }
-
   isValidField(name: string) {
     const form = this.formGroup.get(name);
     return form?.value && form?.valid;
@@ -38,9 +31,9 @@ export class LeadSectionComponent implements OnInit {
   handleSubmit() {
     this.showErrors = true;
     if (this.isValidField('name') && this.isValidField('email')) {
-      this.onSubmit.emit({
-        name: this.formGroup.get('name')?.value,
-        email: this.formGroup.get('email')?.value,
+      this.handleSubmitClicked.emit({
+        name: this.formGroup.get('name')?.value ?? '',
+        email: this.formGroup.get('email')?.value ?? '',
       });
     }
   }
