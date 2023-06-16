@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { AnimationOptions } from 'ngx-lottie';
+import { AnimationItem } from 'ngx-lottie/lib/symbols';
 
 @Component({
   selector: 'app-animation',
@@ -6,5 +8,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./animation.component.scss']
 })
 export class AnimationComponent {
+    options: AnimationOptions = {
+      path: '/assets/animation.json',
+    };
+
+    animationCreated(animationItem: AnimationItem): void {
+      console.log(animationItem);
+    }
 
 }
