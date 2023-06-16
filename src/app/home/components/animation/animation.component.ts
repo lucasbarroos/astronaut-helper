@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { AnimationOptions } from 'ngx-lottie';
 import { AnimationItem } from 'ngx-lottie/lib/symbols';
 
@@ -7,17 +7,14 @@ import { AnimationItem } from 'ngx-lottie/lib/symbols';
   templateUrl: './animation.component.html',
   styleUrls: ['./animation.component.scss']
 })
-export class AnimationComponent {
+export class AnimationComponent implements OnInit {
   @Input()
-  path: string = '/assets/animation.json';
+  path = '/assets/animation.json';
 
   @Input()
   styles: Partial<CSSStyleDeclaration> = {};
 
   options: AnimationOptions = {};
-
-  constructor() {
-  }
 
   ngOnInit() {
     this.options = {
