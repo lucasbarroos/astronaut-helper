@@ -8,7 +8,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 export class ActionButtonComponent {
 
   @Input()
-  title: string = 'Help Me';
+  title = 'Help Me';
   
   @Output()
   handleClick: EventEmitter<void> = new EventEmitter();
