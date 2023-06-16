@@ -1,15 +1,21 @@
 @import "../../../../variables.scss";
 
 .about-section {
-    display: flex;
-    flex-direction: column-reverse;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 40px 60px;
-    gap: 10px;
-    @media (min-width: $tablet-max-size) {
-        padding: 40px 120px;
-        flex-direction: row;
-    }
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px 60px;
+  gap: 10px;
+
+  @media (min-width: $tablet-max-size) {
+    padding: 40px 120px;
+    flex-direction: row;
+  }
+
+  small {
+    font-size: $font-small;
+    color: $black;
+  }
 }
